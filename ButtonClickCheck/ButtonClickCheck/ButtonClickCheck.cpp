@@ -1,6 +1,19 @@
 #include "arduino.h"
 #include "ButtonClickCheck.h"
 
+int ButtonClickCheck::ClickCheck()
+{
+	//결과
+	int nReturn = 0;
+	
+	if(0 < Pin)
+	{//핀번호가 있다.
+		nReturn = ClickCheck(digitalRead(Pin));
+	}
+	
+	return nReturn;
+}
+
 //클릭여부를 판단한다.
 //nDigitalRead : (int) 입력된 디지털 값
 //return : (int) 1=Up, 2=Down, 3=First Down
