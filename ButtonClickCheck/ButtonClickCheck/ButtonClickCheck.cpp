@@ -16,7 +16,7 @@ int ButtonClickCheck::ClickCheck()
 
 //클릭여부를 판단한다.
 //nDigitalRead : (int) 입력된 디지털 값
-//return : (int) 1=Up, 2=Down, 3=First Down
+//return : (int) 1=Up, 2=Down, 3=First Down, 4=First Up
 int ButtonClickCheck::ClickCheck(int nDigitalRead)
 {
 	//결과
@@ -42,7 +42,7 @@ int ButtonClickCheck::ClickCheck(int nDigitalRead)
 		if(bBtnPush1 == false)
 		{//이번엔 버튼이 안눌림
 		  bBtnPush2 = false;
-		  nReturn = 1;
+		  nReturn = 4;
 		}
 	}
 	else if(bBtnPush2 == false)
