@@ -1,6 +1,8 @@
 #include "arduino.h"
 #include "ButtonClickCheck.h"
 
+/// @brief 저장된 핀번호의 값을 읽어 클릭정보를 판단한다.
+/// @return 1=Up, 2=Down, 3=First Down, 4=First Up
 int ButtonClickCheck::ClickCheck()
 {
 	//결과
@@ -14,9 +16,9 @@ int ButtonClickCheck::ClickCheck()
 	return nReturn;
 }
 
-//클릭여부를 판단한다.
-//nDigitalRead : (int) 입력된 디지털 값
-//return : (int) 1=Up, 2=Down, 3=First Down, 4=First Up
+/// @brief 전달된 값을 읽어 클릭정보를 판단한다.
+/// @param nDigitalRead 입력된 디지털 값(전달된 값)
+/// @return 1=Up, 2=Down, 3=First Down, 4=First Up
 int ButtonClickCheck::ClickCheck(int nDigitalRead)
 {
 	//결과
